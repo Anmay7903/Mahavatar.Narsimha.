@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lord of Mysteries S1 Downloads</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Root/base styles */
+        :root {
+            --primary: #ff0000;
+            --primary-light: #ff3f3f;
+            --primary-dark: #ff0000;
+            --secondary: #ff3c00;
+            --secondary-light: #222;
+            --bg-dark: #000;
+            --bg-darker: #111;
+            --bg-light: #222;
+            --text-light: #fff;
+            --text-muted: #aaa;
+            --text-info: #777;
+            --border-radius-sm: 4px;
+            --border-radius-md: 6px;
+            --border-radius-lg: 8px;
+            --transition: all 0.3s ease;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 5px 15px rgba(255, 94, 0, 0.2);
+            --pulse-animation: pulse 2s infinite;
+        }
+
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Layout */
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex: 1;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--bg-light);
+        }
+
+        .header h1 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .header p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Download items */
+        .download-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .item {
+            background-color: var(--bg-darker);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            border-radius: var(--border-radius-lg);
+            transition: var(--transition);
+            border-left: 4px solid transparent;
+            box-shadow: var(--shadow);
+        }
+
+        .item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+            background-color: var(--bg-light);
+        }
+
+        .item.large-file {
+            border-left: 4px solid var(--secondary);
+            background-color: var(--secondary-light);
+        }
+
+        .item.large-file:hover {
+            background-color: var(--secondary-light);
+        }
+
+        .item-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .title {
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .size {
+            background-color: var(--primary);
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--border-radius-sm);
+            font-size: 0.75rem;
+            color: var(--text-light);
+            min-width: 70px;
+            text-align: center;
+        }
+
+        .item.large-file .size {
+            background-color: var(--secondary);
+            animation: var(--pulse-animation);
+        }
+
+        .download-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-light);
+            border-radius: var(--border-radius-md);
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .download-btn:hover {
+            background-color: var(--primary-dark);
+            transform: scale(1.05);
+        }
+
+        .download-btn i {
+            font-size: 0.9rem;
+        }
+
+        /* Info text */
+        .info-text {
+            font-size: 0.75rem;
+            color: var(--text-info);
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+
+            .item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+
+            .meta {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .download-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            background-color: var(--bg-darker);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-download"></i> Season 1 Downloads</h1>
+            <p>High quality videos of Lord of Mysteries</p>
+        </div>
+
+        <div class="item large-file">
+            <div class="item-content">
+                <div class="title">Lord.of.Mysteries S1 Ep-02 HD [Lords Anime].mp4</div>
+                <div class="meta">
+                    <span class="size">448.14 MB</span>
+                    <span class="quality">HD 1080p</span>
+                </div>
+            </div>
+            <a class="download-btn" href="link-to-ep02.mp4"><i class="fas fa-cloud-download-alt"></i> Download</a>
+        </div>
+
+
+        <div class="item large-file">
+            <div class="item-content">
+                <div class="title">Lord.of.Mysteries S1 Ep-02 HD [Lords Anime].mp4</div>
+                <div class="meta">
+                    <span class="size">448.14 MB</span>
+                    <span class="quality">HD 1080p</span>
+                </div>
+            </div>
+            <a class="download-btn" href="link-to-ep02.mp4"><i class="fas fa-cloud-download-alt"></i> Download</a>
+        </div>
+
+        <div class="item large-file">
+            <div class="item-content">
+                <div class="title">Lord.of.Mysteries S1 Ep-02 HD [Lords Anime].mp4</div>
+                <div class="meta">
+                    <span class="size">448.14 MB</span>
+                    <span class="quality">HD 1080p</span>
+                </div>
+            </div>
+            <a class="download-btn" href="link-to-ep02.mp4"><i class="fas fa-cloud-download-alt"></i> Download</a>
+        </div>
+
+        <div class="item large-file">
+            <div class="item-content">
+                <div class="title">Lord.of.Mysteries S1 Ep-02 HD [Lords Anime].mp4</div>
+                <div class="meta">
+                    <span class="size">448.14 MB</span>
+                    <span class="quality">HD 1080p</span>
+                </div>
+            </div>
+            <a class="download-btn" href="link-to-ep02.mp4"><i class="fas fa-cloud-download-alt"></i> Download</a>
+        </div>
+
+
+        <div class="item large-file">
+            <div class="item-content">
+                <div class="title">Lord.of.Mysteries S1 Ep-02 HD [Lords Anime].mp4</div>
+                <div class="meta">
+                    <span class="size">448.14 MB</span>
+                    <span class="quality">HD 1080p</span>
+                </div>
+            </div>
+            <a class="download-btn" href="link-to-ep02.mp4"><i class="fas fa-cloud-download-alt"></i> Download</a>
+        </div>
+
+
+        <div class="item large-file">
+            <div class="item-content">
+                <div class="title">Lord.of.Mysteries S1 Ep-02 HD [Lords Anime].mp4</div>
+                <div class="meta">
+                    <span class="size">448.14 MB</span>
+                    <span class="quality">HD 1080p</span>
+                </div>
+            </div>
+            <a class="download-btn" href="link-to-ep02.mp4"><i class="fas fa-cloud-download-alt"></i> Download</a>
+        </div>
+
+
+        <div class="item large-file">
+            <div class="item-content">
+                <div class="title">Lord.of.Mysteries S1 Ep-02 HD [Lords Anime].mp4</div>
+                <div class="meta">
+                    <span class="size">448.14 MB</span>
+                    <span class="quality">HD 1080p</span>
+                </div>
+            </div>
+            <a class="download-btn" href="link-to-ep02.mp4"><i class="fas fa-cloud-download-alt"></i> Download</a>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>
